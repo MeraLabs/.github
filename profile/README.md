@@ -28,28 +28,6 @@ Every repo under MeraLabs follows a simple promise:
 
 ---
 
-## AlphaPIL — flagship package
-
-AlphaPIL is a Python engine that parses nested function templates and renders them into images using Pillow — with full async support via `aiohttp`. Think of it as a templating language for image generation, Especially Made it for Easying the Task of Image UI Generations in Discord Bot Developments!
-
-```python
-from alphapil import CanvasEngine
-
-engine = CanvasEngine()
-await engine.render("""
-  $createCanvas[800;400;#1a1a2e]
-  $drawText[40;180;$toUpper[{title}];#ffffff;48;bold]
-  $drawImage[600;100;{avatar};160;160;1.0]
-  $save[output.png]
-""", variables={"title": "hello world", "avatar": "avatar.png"})
-```
-
-Key capabilities: recursive parser · modular mixin architecture · shape/text/image/filter functions · live template previewer · auto-generated docs
-
-→ [Full docs & quick start](https://github.com/MeraLabs/AlphaPIL)
-
----
-
 ## Contributing
 
 MeraLabs is run by a small team and contributions of any size are welcome — bug reports, docs fixes, new modules, feature ideas.
